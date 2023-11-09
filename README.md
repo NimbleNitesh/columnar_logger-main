@@ -27,3 +27,6 @@ Link: <a href='https://drive.google.com/file/d/17DED5Oew2FswI4TyryQ_fnCFZUtLKkrd
 
 ## Limitations
 I haven't tested the code for large files of range *4 GB to 48 GB*. But I believe we need to augment the code a little more for them. For example we would need to read the code in batches of size of around **1 GB**. Directly loading a huge file into the memory will most probably trigger the OS to kill the program.
+
+## Updates
+To address high memory usage, I'm handling the data in chunks. The typical method is to process data in fixed-size chunks, but this can lead to issues. For instance, if we process a 1 GB chunk and the last line isn't complete, it could corrupt the JSON data that needs processing. Therefore, I've adopted an approach of processing chunks based on the number of lines. I've introduced a variable called `LIMIT` to control the number of lines processed in each iteration. As soon as the number of lines reach limit I perform the file write/append operation.
