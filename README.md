@@ -25,7 +25,7 @@ Here my key observation is that each **write operations are independent** of eac
 Just run the program. The CLI interface is built to take the path to a log file and generate the output at the desired location.
 
 ## Demo Video
-Link: <a href='https://drive.google.com/file/d/17DED5Oew2FswI4TyryQ_fnCFZUtLKkrd/view?usp=sharing'>Click Here</a>
+Link: <a href='https://github.com/NimbleNitesh/columnar_logger-main/blob/master/Demonstration_video.mkv'>Click Here</a>
 
 ## Limitations
 I haven't tested the code for large files of range *4 GB to 48 GB*. But I believe we need to augment the code a little more for them. For example we would need to read the code in batches of size of around **1 GB**. Directly loading a huge file into the memory will most probably trigger the OS to kill the program.
