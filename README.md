@@ -19,6 +19,8 @@ Here my key observation is that each **write operations are independent** of eac
 | 256 MB | **6.00**  | 600 MB       |
 | 512 MB | **12.00** | 1100 MB      |
 
+**Now with the updated code time taken and memory consumed both depend on the value of variable `LIMIT` itself. Refer the video attached to see details.**
+
 ## Testable CLI 
 Just run the program. The CLI interface is built to take the path to a log file and generate the output at the desired location.
 
